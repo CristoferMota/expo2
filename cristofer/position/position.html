@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="StyleSheet" href="stylePosition.css"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La propiedad position</title>
+</head>
+<body>
+    <div class="header">
+        <h2 class="titulo">Posicionamiento fijo y sticky</h2>
+    </div>
+    <div class="container">
+        <h2>Posicionamiento fijo</h2>
+        <p class="parrafo">El posicionamiento fijo o fixed es hermano del posicionamiento absoluto. Funciona exactamente igual, salvo que hace que el elemento se muestre en una posición fija, aunque el usuario haga scroll y se desplace hacia abajo en la página web, el elemento seguirá en el mismo sitio posicionado.</p>
+        <!-- Caja de ejemplo #1 -->
+        <div class="ejemplo1">
+            <!-- Menu del ejemplo #1
+            <div class="ejemploMenu1">
+                <ul>
+                   <li><a href="" class="beggin">HOME</a></li>
+                   <li><a href="">ABOUT US</a></li>
+                   <li><a href="">PORTAFOLIO</a></li>
+                   <li><a href="">BLOG</a></li>
+                   <li><a href="" class="end">CONTACT</a></li>
+               </ul>
+            </div>
+            Textos de ejemplo
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p> -->
+            <!--Gif del fixed-->
+            <img src="https://i.stack.imgur.com/uXfmQ.gif" class="ejemImagen">
+        </div>
+        <div class="code">
+<pre>
+<span>.menu</span>{
+    <span class="properties"><i>position</i></span>: <span class="properties">fixed</span>;
+}
+</pre>
+        </div>
+        <hr>
+        <h2>Posicionamiento sticky</h2>
+        <p class="parrafo">El posicionamiento sticky se suele utilizar cuando queremos que un elemento se posicione en un lugar específico de forma fija («sticky», pegajoso), como por ejemplo, cuando al hacer scroll llegamos a un elemento y queremos que ese elemento se quede fijo en la parte superior mientras continuamos haciendo scroll. Este comportamiento es muy habitual con los menús superiores de las páginas o las cabeceras de secciones.</p>
+        <!-- Caja de ejemplo #2 -->
+        <div class="ejemplo2">
+            <!-- Textos de ejemplo -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <!-- Menu del ejemplo #2 -->
+            <div class="ejemploMenu2">
+                <ul>
+                   <li><a href="" class="beggin">HOME</a></li>
+                   <li><a href="">ABOUT US</a></li>
+                   <li><a href="">PORTAFOLIO</a></li>
+                   <li><a href="">BLOG</a></li>
+                   <li><a href="" class="end">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- Textos de ejemplo -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+        </div>
+        <div class="code">
+<pre>
+<span>.menu</span>{
+    <span class="properties"><i>position</i></span>: <span class="properties">sticky</span>;
+    <span class="properties"><i>top</i></span>: <span class="number">20<span class="unit">px</span></span>;
+}
+</pre>
+        </div>
+        <hr>
+        <div class="video">
+            <h2>Vídeo explicativo sobre position fixed y sticky</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9VRkcnQ3GpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- mucho texto -->
+    </div>
+    <div class="footer">
+        <a href="/bruno/Position-bruno/expo.html"><div class="anterior">
+            <div class="back">
+                <img src="/cristofer/back.png">
+            </div>
+            <div class="btnText">
+                <p class="parrafo">Position</p>
+            </div>
+        </div></a>
+        <a href="/bruno/Flexbox/flexboxB.html"><div class="siguiente">
+            <div class="btnText">
+                <p class="parrafo">Flexbox</p>
+            </div>
+            <div class="next" id="next">
+                <img src="/cristofer/next.png">
+            </div>
+        </div></a>
+    </div>
+</body>
+</html>

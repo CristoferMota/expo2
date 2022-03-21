@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexboxB.css">
+    <title>Flexbox</title>
+</head>
+<body>
+    <!-- Concepto -->
+<div class="pos"> 
+    <div class="ptema">
+    <p class="titulo">Flexbox</p>
+    <hr>
+    <h1>Concepto</h1>        
+    <p>Para empezar a utilizar <b>flexbox</b>  lo primero que debemos hacer es conocer algunos de los elementos básicos de este nuevo esquema, que son los siguientes:</p>
+    <div class="cont-concepto">
+        <img src="concepto.png">
+
+    <div class="parrafos">  
+        <ul>
+            <li><p><b>Contenedor:</b> Es el elemento padre que tendrá en su interior cada uno de los ítems flexibles. Observa que al contrario que muchas otras estructuras CSS, por norma general, en Flex establecemos las propiedades al elemento padre.</p></li>
+            <li><p><b> principal:</b> Los contenedores flexibles tendrán una orientación principal específica. Por defecto, es en horizontal (en fila).</p></li>
+            <li><p><b> secundario:</b> De la misma forma, los contenedores flexibles tendrán una orientación secundaria, perpendicular a la principal. Si la principal es en horizontal, la secundaria será en vertical, y viceversa.</p></li>
+            <li><p><b>Ítem:</b> Cada uno de los hijos flexibles que tendrá el contenedor en su interior.</p></li>
+        </ul>
+        </div>
+    </div>     
+    </div>
+
+</br>
+
+
+
+
+
+<!-- flex/inline-flex-->
+<h1>Flex e inline-flex</h1>
+<p>Para activar el modo flexbox, hemos utilizado sobre el elemento contenedor la propiedad display que vimos en Tipos de elementos, y especificar el valor flex o inline-flex <i>(dependiendo de como queramos que se comporte el contenedor):</i></p>
+
+
+
+<h3>Ejemplo con flex: </h3>
+   
+    <div class="container-flex"> <!-- Flex container -->
+        <div class="cuadrado">1</div> <!-- Flex items -->
+        <div class="cuadrado1">2</div>
+        <div class="cuadrado2">3</div>
+    </div>
+
+    <br/>
+    <br/>
+<img  class="imagen-ej"src="flex.jpg">
+
+
+<p>Por defecto, y sólo con esto, observaremos que los elementos se disponen todos sobre una misma línea. Esto ocurre porque estamos utilizando el modo <b>flexbox</b> </p>
+
+<h3>Ejemplo con inline-flex: </h3>
+   
+    <div class="container-inline-flex"> <!-- Flex container -->
+        <div class="cuadrado">1</div> <!-- Flex items -->
+        <div class="cuadrado1">2</div>
+        <div class="cuadrado2">3</div>
+    </div>
+<br/>
+<br/>
+<img class="imagen-ej" src="linline-flex.jpg">
+<br/>
+<br/>
+<!-- Dirección de los ejes -->
+    <h1>Dirección de los ejes</h1>
+    <hr>
+
+    <p>Existen dos propiedades principales para manipular la dirección y comportamiento de los ítems a lo largo del eje principal del contenedor las cuales son: <b>flex-direction y flex-wrap</b></p>
+    <p>Mediante la propiedad <b>flex-direction</b> podemos modificar la dirección del <b>eje principal</b> del contenedor para que se oriente en horizontal <i>(por defecto)</i> o en vertical</p>
+    
+    <!-- row/row-reverse -->
+    <br/>
+    <br/>
+    <p>
+        <b class="usando">Usando la propiedad flex-direction</b>
+    </p>
+    <h3>Ejemplo con row: </h3>
+        <div class="container-row"> <!-- Flex container -->
+            <div class="cuadrado">1</div> <!-- Flex items -->
+            <div class="cuadrado1">2</div>
+            <div class="cuadrado2">3</div>
+        </div>
+
+        <br/>
+        <br/>
+        <div class="imagen-div">
+            
+        <img class="imagen-ej" src="row.jpg">
+        <p class="usando">row y row-reverse</p>
+        <img class="imagen-ej" src="row-reverse.jpg">
+        
+        </div>
+<br/>
+<br/>
+
+
+<h3>Ejemplo con row-reverse: </h3>
+        <div class="container-row-reverse"> <!-- Flex container -->
+            <div class="cuadrado">1</div> <!-- Flex items -->
+            <div class="cuadrado1">2</div>
+            <div class="cuadrado2">3</div>
+        </div>
+
+<br/>
+<br/>
+
+<!-- column/reverse -->
+<h3>Ejemplo con column: </h3>
+        <div class="container-column"> <!-- Flex container -->
+            <div class="cuadrado">1</div> <!-- Flex items -->
+            <div class="cuadrado1">2</div>
+            <div class="cuadrado2">3</div>
+        </div>
+
+        <br/>
+        <br/>
+        <img class="imagen-ej" src="column.jpg">
+
+        <h3>Ejemplo con column-reverse: </h3>
+        <div class="container-column-reverse"> <!-- Flex container -->
+            <div class="cuadrado">1</div> <!-- Flex items -->
+            <div class="cuadrado1">2</div>
+            <div class="cuadrado2">3</div>
+        </div>
+        <br/>
+        <br/>
+
+        <img class="imagen-ej" src="column-reverse.jpg">
+
+        <p>Esto nos permite tener un control muy alto sobre el orden de los elementos en una página. Veamos la aplicación de estas propiedades sobre el ejemplo anterior, para modificar el flujo del eje principal del contenedor:</p>
+<hr>
+
+
+
+<!--flex-wrap-->
+
+<h1><b> Propiedad wrap </b></h1>
+
+<p><b class="usando">Usando la propiedad flex-wrap</b></p>
+
+<p>existe otra propiedad llamada flex-wrap con la que podemos especificar el comportamiento del contenedor respecto a evitar que se desborde <i>(nowrap, valor por defecto) </i> </p>
+
+
+<div class="flex-wrap">
+        <img class="imagen-ej" src="nowrap.jpg">
+        <img class="imagen-ej" src="wrap.jpg">
+        <img class="imagen-ej" src="wrap-reverse.jpg">
+</div>
+<div class="flex-wrap">
+    <h3>Ejemplo con flex-nowrap: </h3>
+    <h3>Ejemplo con flex-wrap: </h3>
+    <h3>Ejemplo con flex-wrap-reverse: </h3>
+</div>
+<div class="flex-wrap">
+    <img class="imagen-ej" src="nowrap-css.jpg">
+    <img class="imagen-ej" src="wrap-css.jpg">
+    <img class="imagen-ej" src="wrap-reverse-css.jpg">
+</div>
+
+
+<!-- Dirección de los ejes -->
+<hr>
+<h1>Propiedades de alineación</h1>
+<p>Ahora que tenemos un control básico del contenedor de estos ítems flexibles, necesitamos conocer las propiedades existentes dentro de flexbox para disponer los ítems dependiendo de nuestro objetivo. Vamos a echar un vistazo a 4 propiedades interesantes para ello, la primera de ellas actua en el eje principal, mientras que el resto en el eje secundario:</p>
+</br>
+<p class="usando">Usando la propiedad justify-content</p>
+<h3>Flex end</h3>
+<div class="container-flex"> <!-- Flex container -->
+    <div class="cuadrado">1</div> <!-- Flex items -->
+    <div class="cuadrado1">2</div>
+    <div class="cuadrado2">3</div>
+</div>
+
+<img class="imagen-ej" src="just-flex-end.jpg">
+
+<!-- justity-content -->
+<h3>Flex center</h3>
+<div class="container-center"> <!-- Flex container -->
+    <div class="cuadrado">1</div> <!-- Flex items -->
+    <div class="cuadrado1">2</div>
+    <div class="cuadrado2">3</div>
+</div>
+
+<img class="imagen-ej" src="just-flex-center.jpg">
+
+<h3>Flex space between</h3>
+<div class="container-space-between"> <!-- Flex container -->
+    <div class="cuadrado">1</div> <!-- Flex items -->
+    <div class="cuadrado1">2</div>
+    <div class="cuadrado2">3</div>
+</div>
+
+<img class="imagen-ej" src="just-flex-between.jpg">
+
+<h3>Flex space around</h3>
+<div class="container-space-around"> 
+    <div class="cuadrado">1</div> 
+    <div class="cuadrado1">2</div>
+    <div class="cuadrado2">3</div>
+</div>
+
+<img class="imagen-ej" src="just-flex-around.jpg">
+
+<h3>Flex space evenly</h3>
+<div class="container-space-evenly"> 
+    <div class="cuadrado">1</div> 
+    <div class="cuadrado1">2</div>
+    <div class="cuadrado2">3</div>
+</div>
+
+<img class="imagen-ej" src="just-flex-evenly.jpg">
+
+<p>Nos servirá cuando estemos tratando con un contenedor flex multilinea, que es un contenedor en el que los ítems no caben en el ancho disponible, y por lo tanto, el eje principal se divide en múltiples líneas<i> (por ejemplo, usando flex-wrap: wrap).</i></p>
+<hr/>
+<h1>Align-content</h1>
+</br>
+<div class="flex-wrap">
+
+<img class="imagen-ej" src="flex-end.jpg">
+<img class="imagen-ej" src="flex-center.jpg">
+
+</div>
+<div class="flex-wrap">
+<h3>flex-end</h3>
+<h3>center</h3>
+</div>
+
+<div class="flex-wrap">
+<img class="imagen-ej" src="space-between.jpg">
+<img class="imagen-ej" src="space-around.jpg">
+<img class="imagen-ej" src="stretch.jpg">
+</div>
+
+<div class="flex-wrap">
+<h3>space-between </h3>
+<h3>space-around </h3>
+<h3>stretch </h3>
+</div>
+<hr>
+
+<h1>Sobre el eje secundario</h1>
+
+<p>La otra propiedad importante de este apartado es <b>align-items</b>, que se encarga de alinear los ítems en el eje secundario del contenedor. Hay que tener cuidado de no confundir <b>align-content</b> con <b>align-items</b>, puesto que el primero actúa sobre cada una de las líneas de un contenedor multilinea <i>(no tiene efecto sobre contenedores de una sola línea)</i>, mientras que <b>align-items</b> lo hace sobre la línea actual.</p>
+
+
+<p>flex-start flex-end	center stretch baseline</p>
+
+<p></p>
+
+<h1>Aling-self</h1>
+<p>nos permite cambiar el comportamiento de <b>align-items</b> y sobreescribirlo con comportamientos específicos para ítems concretos que no queremos que se comporten igual que el resto. </p>
+
+<img class="img-nose" src="aling-self.jpg" >
+
+<p>Veamos un con <b>justify-content</b>  y <b>align-items</b>:</p>
+
+<img src="justify-content-y-align-items.jpg">
+
+<h1>Propiedades de hijos</h1>
+<p>A excepción de la propiedad <b>align-self</b> , todas las propiedades que hemos visto hasta ahora se aplican sobre el elemento <b>contenedor</b>. Las siguientes propiedades, sin embargo, se aplican sobre los ítems hijos.</p>
+
+<img class="img-nose" src="propiedad-hijos.jpg">
+
+<h1>Huecos(gaps)</h1>
+
+<p>Existen dos propiedades de flexbox que han surgido recientemente: <b> row-gap y column-gap</b>. Dichas propiedades, permiten establecer el tamaño de un «hueco» entre ítems desde el elemento padre contenedor, y sin necesidad de estar utilizando padding o margin en los elementos hijos.</p>
+
+<img class="img-huecos" src="huecos2.png">
+
+<h1>Orden de los ítems</h1>
+
+<p>Por último, y quizás una de las propiedades más interesantes, es order, que modificar y establece el <b>orden</b>  de los ítems según una secuencia numérica.</p>
+
+<p>Por defecto, todos los ítems flex tienen un <b> order: 0</b> implícito, aunque no se especifique. Si indicamos un <b>order</b>  con un valor numérico, irá recolocando los ítems según su número, colocando antes los ítems con número más pequeño (incluso valores negativos) y después los ítems con números más altos.</p>
+
+<img src="orden.jpg">
+
+</br>
+</div> 
+
+</div> 
+
+<div class="footer">
+    <a href="/cristofer/position/position.html"><div class="anterior">
+        <!-- <div class="back">
+            <img src="/cristofer/back.png">
+        </div> -->
+        <div class="btnText">
+            <p class="parrafo">Position</p>
+        </div>
+    </div></a>
+    <a href="/cristofer/grid/grid.html"><div class="siguiente">
+        <div class="btnText">
+            <p class="parrafo">Grid CSS</p>
+        </div>
+        <!-- <div class="next" id="next">
+            <img src="/cristofer/next.png">
+        </div> -->
+    </div></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2471A3;
+}
+/* Contenedor */
+.container{
+    width: 80%;
+    background-color: #EEF8FF;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 30px;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+/* Parrafo */
+.parrafo{
+    font-size: x-large;
+    text-align: justify;
+    width: 99%;
+}
+/* ----------- Header ----------- */
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #EEF8FF;
+    height: 40px;
+}
+/* Titulo */
+.titulo{
+    text-align: center;
+    margin-top: 8px;
+}
+/*--------------------------------------------*/
+
+/* ----------- Ejemplo #1: fixed ----------- */
+/* Caja de ejemplo #1 */
+div .ejemplo1{
+    width: 65%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    overflow-y: scroll;
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 0 0 15px;
+    /* position: sticky; 
+    top: 50px; */
+}
+/* div de menu */
+/* .ejemplo1 .ejemploMenu1{
+    position: fixed;
+    top: 20px;
+}
+
+.ejemplo1 .ejemploMenu1 ul{
+    position: sticky; 
+    top: 20px;
+    list-style: none;
+    padding: 0;
+    background-color: #454545;
+    width: fit-content;
+    text-align: center;
+    margin: auto; 
+    margin-bottom: 1%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.ejemploMenu1 ul li a{
+    text-decoration: none;
+    color: skyblue;
+    padding: 8px 30px;
+    display: block;
+}
+
+.ejemploMenu1 ul li{
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ejemploMenu1 ul li a:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+}
+
+.ejemploMenu1 .beggin:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ejemploMenu1 .end:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+    border-radius: 0px 5px 5px 0px;
+} */
+.ejemImagen{
+    width: 99%;
+}
+/*--------------------------------------------*/
+
+/* ----------- Ejemplo #2: fixed ----------- */
+/* Caja de ejemplo #2 */
+div .ejemplo2{
+    width: 65%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    overflow-y: scroll;
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 0 0 15px;
+}
+/* div de menu */
+.ejemploMenu2{
+    position: sticky;
+    top: 20px;
+}
+
+.ejemplo2 .ejemploMenu2 ul{
+    /* position: sticky; 
+    top: 20px; */
+    list-style: none;
+    padding: 0;
+    background-color: #454545;
+    width: fit-content;
+    text-align: center;
+    margin: auto; 
+    margin-bottom: 1%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.ejemploMenu2 ul li a{
+    text-decoration: none;
+    color: skyblue;
+    padding: 8px 30px;
+    display: block;
+}
+
+.ejemploMenu2 ul li{
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ejemploMenu2 ul li a:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+}
+
+.ejemploMenu2 .beggin:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ejemploMenu2 .end:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+    border-radius: 0px 5px 5px 0px;
+}
+/*--------------------------------------------*/
+
+.video{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    border-radius: 30px;
+    background-color: #2471A3;
+    text-align: center;
+    color: #EEF8FF;
+    box-shadow: 0 0 10px 5px black inset;
+}
+
+iframe{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------ Ejemplos: Code ------------ */
+div .code{
+    width: 65%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #454545;
+}
+
+pre{
+    font-size: x-large;
+    color: white;
+}
+span{
+    color: lime;
+}
+.properties{
+    color:rgb(10, 185, 185);
+}
+.number{
+    color:rgb(225, 40, 225);
+}
+.unit{
+    color:rgb(230, 0, 60);
+}
+/*--------------------------------------------*/
+
+hr{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* ------------- Footer ------------- */
+.footer{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.siguiente{
+    background-color: #EEF8FF;
+    padding: 1%;
+    display: inline-block;
+    margin-left: 25%;
+    width:10%;
+    border-radius: 25px;
+}
+.siguiente:hover{
+    box-shadow: 0 0 5px 5px black inset;
+}
+.siguiente .btnText{
+    display: inline-block;
+    background-color: none;
+    margin: auto;
+    margin-bottom: auto;
+}
+.siguiente .next{
+    display: inline-block;
+    background-color: none;
+}
+/* .siguiente::after{
+    content: url(next.png);
+}
+.anterior::before{
+    content: url(back.png);
+} */
+.anterior{
+    background-color: #EEF8FF;
+    padding: 1%;
+    display: inline-block;
+    margin-right: 25%;
+    width: 10%;
+    border-radius: 25px;
+}
+.anterior:hover{
+    box-shadow: 0 0 5px 5px black inset;
+}
+.anterior .btnText{
+    display: inline-block;
+    background-color: none;
+    margin: auto;
+    margin-bottom: auto;
+}
+.anterior .back{
+    display: inline-block;
+    background-color: none;
+}
+.siguiente .parrafo{
+    font-size: large;
+    margin: auto;
+    color: black;
+}
+.anterior .parrafo{
+    font-size: large;
+    margin: auto;
+    color: black;
+}
+/*--------------------------------------------*/

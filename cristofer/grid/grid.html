@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="StyleSheet" href="styleGrid.css"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridd CSS</title>
+</head>
+<body>
+    <div class="header">
+        <h2 class="titulo">Gridd CSS</h2>
+    </div>
+    <div class="container">
+        <!-- Grid concepto -->
+        <div class="subGridConcept">
+            <h2>Concepto</h2>
+            <p class="parrafo">CSS Grid layout contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.</p>
+            <div class="imagenExpli">
+                <!--Imagen explicativa-->
+                <img src="https://lenguajecss.com/css/maquetacion-y-colocacion/grid-css/grid-css-conceptos.png">
+            </div>
+            <div>
+                <ul class="listConcept">
+                    <li><strong>Contenedor:</strong> El elemento padre contenedor que definirá la cuadrícula o rejilla.</li>
+                    <li><strong>Ítem:</strong> Cada uno de los hijos que contiene la cuadrícula (elemento contenedor).</li>
+                    <li><strong>Celda (grid cell):</strong> Cada uno de los cuadritos (unidad mínima) de la cuadrícula.</li>
+                    <li><strong>Area (grid area):</strong> Región o conjunto de celdas de la cuadrícula.</li>
+                    <li><strong>Banda (grid track):</strong> Banda horizontal o vertical de celdas de la cuadrícula.</li>
+                    <li><strong>Línea (grid line):</strong> Separador horizontal o vertical de las celdas de la cuadrícula.</li>
+                </ul>
+            </div>
+            <p class="parrafo">Para activar la cuadrícula grid hay que utilizar sobre el elemento contenedor la propiedad display y especificar el valor grid o inline-grid.</p>
+            <div>
+                <table border="0">
+                    <th>Tipo de elemento</th>
+                    <th>Descripción</th>
+                    <tr>
+                        <td>inline-grid</td>
+                        <td>Establece una cuadrícula con ítems en línea, de forma equivalente a inline-block.</td>
+                    </tr>
+                    <tr>
+                        <td>grid</td>
+                        <td>Establece una cuadrícula con ítems en bloque, de forma equivalente a block.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ejemplo">
+                <!-- Grid -->
+                <h2>Grid</h2>
+                <div class="grid"> <!-- contenedor -->
+                    <div class="a">1</div> <!-- cada uno de los ítems del grid -->
+                    <div class="b">2</div>
+                    <div class="c">3</div>
+                    <div class="d">4</div>
+                </div>
+                <hr>
+                <h2>Inline-grid</h2>
+                <div class="inlineGrid"> <!-- contenedor -->
+                    <div class="a">1</div> <!-- cada uno de los ítems del grid -->
+                    <div class="b">2</div>
+                    <div class="c">3</div>
+                    <div class="d">4</div>
+                </div>
+            </div>
+
+            <div class="codeConcept">
+<pre>
+<span>.grid</span>{
+    <span class="properties"><i>background-color</i></span>: <span class="number">#2471A3</span>;
+    <span class="properties"><i>display</i></span>: <span class="properties">grid</span> <span class="comment">/* Se utilizó inline-grid en el 
+                     segundo ejemplo */</span>;
+}
+<span>.inlineGrid</span>{
+    <span class="properties"><i>background-color</i></span>: <span class="number">#2471A3</span>;
+    <span class="properties"><i>display</i></span>: <span class="properties">inline-grid</span>;
+}
+<span>.a</span> { <span class="comment">/* Es el mismo codigo para los otros items */</span>
+    <span class="properties"><i>background</i></span>: <span class="properties">gray</span>; 
+    <span class="properties"><i>border</i></span>: <span class="properties">black solid</span>;
+    <span class="properties"><i>width</i></span>: <span class="properties">fit-content</span>;
+    <span class="properties"><i>padding</i></span>: <span class="number">3</span><span class="unit">%</span></span>; 
+}
+</pre>
+            </div>
+        </div>
+
+            <!-- Grid lineas y columnas -->
+        <hr>
+        <div class="subGridRowColumn">
+            <h2>Grid con filas y columnas</h2>
+            <p class="parrafo">Es posible crear cuadrículas con un tamaño explícito. Para ello, sólo hay que usar las propiedades CSS grid-template-columns y grid-template-rows, que sirven para indicar las dimensiones de cada celda de la cuadrícula, diferenciando entre columnas y filas. Las propiedades son las siguientes:</p>
+            <div>
+                <table border="0">
+                    <th>Propiedad</th>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                    <tr>
+                        <td>grid-template-columns</td>
+                        <td>[<em>col1</em>] [<em>col2</em>] ...</td>
+                        <td>Establece el size de cada columna (col 1, col 2...).</td>
+                    </tr>
+                    <tr>
+                        <td>grid-template-rows</td>
+                        <td>[<em>fila1</em>] [<em>fila2</em>] ...</td>
+                        <td>Establece el size de cada fila (fila 1, fila 2...).</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Caja de ejemplo #1 -->
+            <!-- <div class="ejemplo1">
+            Menu del ejemplo #1
+            <div class="ejemploMenu1">
+                <ul>
+                   <li><a href="" class="beggin">HOME</a></li>
+                   <li><a href="">ABOUT US</a></li>
+                   <li><a href="">PORTAFOLIO</a></li>
+                   <li><a href="">BLOG</a></li>
+                   <li><a href="" class="end">CONTACT</a></li>
+               </ul>
+            </div>
+            Textos de ejemplo
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+        </div> -->
+            <!-- <div> Imagen explicativa -->
+            <div class="imagenExpli">
+                <!--Imagen explicativa-->
+                <img src="divGrid.PNG" class="divGrid">
+            </div>
+            <div class="code">
+<pre>
+<span>.grid</span>{
+    <span class="properties"><i>display</i></span>: <span class="properties">grid</span>;
+    <span class="properties"><i>grid-template-columns</i></span>: <span class="properties">50px 300px</span>;
+    <span class="properties"><i>grid-template-rows</i></span>: <span class="number">200<span class="unit">px</span> 75<span class="unit">px</span></span>;
+}
+</pre>
+            </div>
+            <div class="imagenExpli">
+                <!--Imagen explicativa-->
+                <img src="https://lenguajecss.com/css/maquetacion-y-colocacion/grid-css/grid-template-columns.png">
+            </div>
+            <div class="nota">
+                <h2 class="fraccion">Unidad fracción restante (fr)</h2>
+                <p class="parrafo">Utilizando la unidad de medida fr, que permite establecer la cantidad de espacio que ocupara un elemento dentro del área disponible , es decir , 1 fr es igual a una parte del espacio disponible, de esta manera podemos definir el espacio de ocupara cada elemento y la cantidad de columnas que tendrá el espacio.</p>
+                <p class="parrafo">Este nuevo ejemplo, se crea una cuadrícula de 2x2, donde el tamaño de ancho de la cuadrícula se divide en dos columnas (mismo tamaño de ancho para cada una), y el tamaño de alto de la cuadrícula se divide en dos filas, donde la primera ocupará el doble (2 fr) que la segunda (1 fr):</p>
+                <div class="ejemploFraccion">
+                    <!-- Grid -->
+                    <div class="gridFraccion"> <!-- contenedor -->
+                        <div class="item1">item 1</div> <!-- cada uno de los ítems del grid -->
+                        <div class="item2">item 2</div>
+                        <div class="item3">item 3</div>
+                        <div class="item4">item 4</div>
+                    </div>
+                </div>
+                <div class="codeFraccion">
+<pre>
+<span>.gridFraccion</span>{
+    <span class="properties"><i>background-color</i></span>: <span class="number">#2471A3</span>;
+    <span class="properties"><i>display</i></span>: <span class="properties">grid</span>;
+    <span class="properties"><i>grid-template-columns</i></span>: <span class="number">1<spanclass="unit">fr</span> 1<span class="unit"></span>fr</span>;
+    <span class="properties"><i>grid-template-rows</i></span>: <span class="number">2<spanclass="unit">fr</span> 1<span class="unit">fr</span></span>;
+}
+<span>.gridFraccion .item1</span> { <span class="comment">/* Es el mismo codigo para los otros items*/</span>
+    <span class="properties"><i>background</i></span>: <span class="number">#95efff</span>; 
+    <span class="properties"><i>border</i></span>: <span class="properties">black solid</span>;
+}
+</pre>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Grid con lineas de nombres -->
+        <hr>
+        <div class="subGridLineasNom">
+            <h2>Grid con líneas nombradas </h2>
+            <p class="parrafo">Con Grid CSS existe la posibilidad de ponerle nombre a las líneas de nuestro sistema grid. Vamos a verlo con un ejemplo, donde probablemente se vea mucho mejor. Partamos de esta estructura HTML:</p>
+            <!-- <div> Imagen explicativa -->
+            <div class="imagenExpli">
+                <!--Imagen explicativa-->
+                <img src="divGrid2.PNG" class="divGrid">
+            </div>
+            <div class="code">
+<pre>
+<span>.grid</span> {
+    <span class="properties"><i>display</i></span>: grid;
+    <span class="properties"><i>grid-template-columns</i></span>: [x0] <span class="number">1</span>fr [x1] <span class="number">1</span>fr [x2] <span class="number">1</span>fr [x3];
+    <span class="properties"><i>grid-template-rows</i></span>: [y0] <span class="number">1</span>fr [y1] <span class="number">1</span>fr [y2] <span class="number">1</span>fr [y3];
+  }
+
+<span>.header</span> {
+    <span class="properties"><i>background</i></span>: darkred;
+    <span class="properties"><i>grid-column-start</i></span>: x0;
+    <span class="properties"><i>grid-column-end</i></span>: x3;
+  
+    /* Equivalente a */
+    <span class="properties"><i>grid-column</i></span>: x0 / x3;
+}
+  
+<span>.sidebar</span> {
+    <span class="properties"><i>background</i></span>: black;
+    <span class="properties"><i>grid-row</i></span>: y1 / y2;
+    <span class="properties"><i>color</i></span>: white;
+}
+  
+<span>.content</span> {
+    <span class="properties"><i>background</i></span>: orange;
+    <span class="properties"><i>grid-column</i></span>: x1 / x3;
+    <span class="properties"><i>grid-row</i></span>: y1 / y3;
+}
+  
+<span>.footer</span> {
+    <span class="properties"><i>background</i></span>: green;
+    <span class="properties"><i>grid-column</i></span>: x0 / x3;
+    <span class="properties"><i>grid-row</i></span>: y2;
+}
+</pre>
+            </div>
+            <p class="parrafo">Se aplicó la siguiente estructura:</p>
+            <ul class="listConcept">
+                <li>Zona <strong>.header</strong> desde la columna <em>x0</em> a <em>x3</em>.</li>
+                <li>Zona <strong>.sidebar</strong> desde la fila <em>y1</em> a <em>y2</em>.</li>
+                <li>Zona <strong>.content</strong> desde la columna <em>x1</em> a <em>x3</em> y desde la fila <em>y1</em> a <em>y3</em>.</li>
+                <li>Zona <strong>.footer</strong> desde la columna <em>x0</em> a <em>x3</em> en la fila <em>y2</em>.</li>
+            </ul>
+            <p class="parrafo">Por lo que nuestra estructura grid quedaría así:</p>
+            <div class="imagenExpli">
+                <!--Imagen explicativa-->
+                <img src="https://lenguajecss.com/css/maquetacion-y-colocacion/grid-css/grid-linenames-zones.png">
+            </div>
+        </div>
+
+        <!-- Grid por areas -->
+        <hr>
+        <div class="subGridArea">
+            <h2>Grid por áreas</h2>
+            <p class="parrafo">Mediante los grids CSS es posible indicar el nombre y posición concreta de cada área de una cuadrícula. Para ello se utiliza la propiedad grid-template-areas, donde se debe especificar el orden de las áreas en la cuadrícula. Posteriormente, en cada ítem hijo, se utiliza la propiedad grid-area para indicar el nombre del área del que se trata:</p>
+            <div>
+                <table border="0">
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                    <tr>
+                        <td>grid-template-areas</td>
+                        <td>Indica la disposición de las áreas en el grid. Cada texto entre comillas simboliza una fila.</td>
+                    </tr>
+                    <tr>
+                        <td>grid-area</td>
+                        <td>Indica el nombre del área. Se usa sobre ítems hijos del grid.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="code">
+<pre>
+<span>.grid</span> {
+    <span class="properties"><i>display</i></span>: grid;
+    <span class="properties"><i>grid-template-areas</i></span>: "head head"
+                         "menu main"
+                         "foot foot";
+}
+  
+<span>.a</span> { <span class="properties"><i>grid-area</i></span>: head; <span class="properties"><i>background</i></span>: blue }
+<span>.b</span> { <span class="properties"><i>grid-area</i></span>: menu; <span class="properties"><i>background</i></span>: red }
+<span>.c</span> { <span class="properties"><i>grid-area</i></span>: main; <span class="properties"><i>background</i></span>: green }
+<span>.d</span> { <span class="properties"><i>grid-area</i></span>: foot; <span class="properties"><i>background</i></span>: orange }
+</pre>
+            </div>
+            <p class="parrafo">Aplicando este código, se consigue una cuadrícula donde:</p>
+            <ul class="listConcept">
+                <li>EL <strong>Item 1</strong>, la cabecera (head), ocuparía toda la parte superior.</li>
+                <li>EL <strong>Item 2</strong>, el menú (menu), ocuparía el área izquierda del grid, debajo de la cabecera.</li>
+                <li>EL <strong>Item 3</strong>, el contenido (main), ocuparía el área derecha del grid, debajo de la cabecera.</li>
+                <li>EL <strong>Item 4</strong>, el pie de cuadrícula (foot), ocuparía toda la zona inferior del grid.</li>
+            </ul>
+            <div class="imagenExpli">
+                <!--Imagen explicativa-->
+                <img src="https://lenguajecss.com/css/maquetacion-y-colocacion/grid-css/grid-template-areas.png">
+            </div>
+            <p class="parrafo">En la propiedad <strong>grid-template-areas</strong>, en lugar de indicar el nombre del área a colocar, también podemos indicar una palabra clave especial:</p>
+            <ul class="listConcept">
+                <li>La palabra clave <strong>none</strong>: Indica que no se colocará ninguna celda en esta posición.</li>
+                <li>Uno o más puntos (.): Indica que se colocará una celda vacía en esta posición.</li>
+            </ul>
+        </div>
+
+
+        <!-- Grid huecos -->
+        <hr>
+        <div class="subGridHuecos">
+            <h2>Huecos en Grid</h2>
+            <p class="parrafo">Por defecto, la cuadrícula tiene todas sus celdas pegadas a sus celdas contiguas. Aunque sería posible darle un margin a las celdas dentro del contenedor, existe una forma más apropiada, que evita los problemas clásicos de los modelos de caja: los huecos (gutters).
+            <br>
+            <br>
+            Para especificar los huecos (espacio entre celdas) se puede utilizar las propiedades column-gap y/o row-gap. En ellas se indica el tamaño de dichos huecos:</p>
+            <div>
+                <table border="0">
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                    <tr>
+                        <td>column-gap&nbsp;&nbsp;&nbsp;</td>
+                        <td>Establece el size de los huecos entre columnas (<em>líneas verticales</em>).</td>
+                    </tr>
+                    <tr>
+                        <td>row-gap</td>
+                        <td>Establece el size de los huecos entre filas (<em>líneas horizontales</em>).</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="parrafo">Tomando el ejemplo anterior como base. En él, le indicamos estas propiedades para colocar huecos entre las celdas de la cuadrícula. El código a añadir al ejemplo anterior sería el siguiente:</p>
+            <div class="code">
+<pre>
+<span>.grid</span>{
+    <span class="properties"><i>column-gap</i></span>: <span class="number">100<span class="unit">px</span></span>;
+    <span class="properties"><i>row-gap</i></span>: <span class="number">10<span class="unit">px</span></span>;
+}
+</pre>
+            </div>
+            <p class="parrafo">Con esto, se obtiene un resultado como el siguiente, indicando huecos entre columnas de 100px y huecos entre filas de 10px:</p>
+            <div class="imagenExpli">
+                <!--Imagen explicativa-->
+                <img src="https://lenguajecss.com/css/maquetacion-y-colocacion/grid-css/grid-gap.png">
+            </div>
+            <p class="parrafo">Existe una propiedad de atajo para las propiedades column-gap y row-gap, permitiéndonos la posibilidad de no tener que indicarlas por separado. La propiedad en cuestión sería gap y se utilizaría de la siguiente forma:</p>  
+            <div class="codeHuecos">
+<pre>
+<span>.grid</span>{
+    /* gap: ~row-gap~ ~column-gap~ */
+    <span class="properties"><i>gap</i></span>: <span class="number">100<span class="unit">px</span></span> <span class="number">80<span class="unit">px</span></span>;
+    /* Equivalente a gap: 40px 40px */
+    /* gap: ~rowcolumn-gap~ */
+    <span class="properties"><i>gap</i></span>: <span class="number">40<span class="unit">px</span></span>;
+}
+</pre>
+            </div>
+        </div>
+
+        <!-- Grid posicion -->
+        <hr>
+        <div class="subGridPosicion">
+            <h2>Posición en el grid</h2>
+            <p class="parrafo">Existen una serie de propiedades que se pueden utilizar para colocar los ítems dentro de la cuadrícula. Con ellas se pueden distribuir los elementos de una forma muy sencilla y cómoda. Dichas propiedades son justify-items y align-items.</p>
+            <div>
+                <table border="0">
+                    <th>Propiedad</th>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                    <tr>
+                        <td>justify-items&nbsp;&nbsp;&nbsp;</td>
+                        <td>start | end | center | <strong>stretch</strong></td>
+                        <td>Distribuye los elementos en el eje horizontal.</td>
+                    </tr>
+                    <tr>
+                        <td>align-items&nbsp;&nbsp;&nbsp;</td>
+                        <td>start | end | center | <strong>stretch</strong></td>
+                        <td>Distribuye los elementos en el eje vertical.</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="parrafo">Estas propiedades se aplican sobre el elemento contenedor padre, pero afectan a los ítems hijos, por lo que actuan sobre la distribución de cada uno de los hijos. En el caso de que queramos que uno de los ítems hijos tengan una distribución diferente al resto, aplicamos la propiedad justify-self o align-self sobre el ítem hijo en cuestión, sobreescribiendo su distribución.
+            <br>
+            <br>
+            Estas propiedades funcionan exactamente igual que sus análogas justify-items o align-items, sólo que en lugar de indicarse en el elemento padre contenedor, se hace sobre un elemento hijo. Las propiedades sobre ítems hijos las veremos más adelante.
+            <br>
+            <br>  
+            También podemos utilizar las propiedades justify-content o align-content para modificar la distribución de todo el contenido en su conjunto, y no sólo de los ítems por separado:</p>
+            <div>
+                <table border="0">
+                    <th>Propiedad</th>
+                    <th>Valor</th>
+                    <tr>
+                        <td>justify-items&nbsp;&nbsp;&nbsp;</td>
+                        <td>start | end | center | stretch | space-around | space-between | space-evenly</td>
+                    </tr>
+                    <tr>
+                        <td>align-items&nbsp;&nbsp;&nbsp;</td>
+                        <td>start | end | center | stretch | space-around | space-between | space-evenly</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="parrafo">De esta forma, podemos controlar prácticamente todos los aspectos de posicionamiento de la cuadrícula directamente desde los estilos CSS de su contenedor padre. Prueba a establecer a stretch todas las propiedades e ir variando una por una a diferentes valores, para ver las diferencias:</p>
+            <div class="videoPosition">
+                <video src="videoPosicionGrid.mp4" controls="true" muted="true" loop="true" class="videoUI"></video>
+            </div>
+            <p class="parrafo">Con estas propiedades conseguiremos que nuestro código sea menos verboso:</p>
+            <div>
+                <table border="0">
+                    <th>Propiedad</th>
+                    <th>Valores</th>
+                    <th>Descripción</th>
+                    <tr>
+                        <td>place-items&nbsp;&nbsp;&nbsp;</td>
+                        <td>[<em>align-items</em>] [<em>justify-items</em>]</td>
+                        <td>Propiedad de atajo para *<strong>-items</strong></td>
+                    </tr>
+                    <tr>
+                        <td>place-content&nbsp;&nbsp;&nbsp;</td>
+                        <td>[<em>align-content</em>] [<em>justify-content</em>]</td>
+                        <td>Propiedad de atajo para *<strong>-content</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+
+        <!-- Grid ajuste automatizo -->
+        <hr>
+        <div class="subGridAjuste">
+            <h2>Ajuste automático de celdas</h2>
+            <p class="parrafo">Es posible utilizar las propiedades <strong>grid-auto-columns</strong> y <strong>grid-auto-rows</strong> para darle un tamaño automático a las celdas de la cuadrícula. Para ello, sólo hay que especificar el tamaño deseado en cada una de las propiedades. Además, también podemos utilizar <strong>grid-auto-flow</strong> para indicar el flujo de elementos en la cuadrícula, y especificar por donde se irán añadiendo. Las propiedades son las siguientes:</p>
+            <div>
+                <table border="0">
+                    <th>Propiedad</th>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                    <tr>
+                        <td>grid-auto-columns&nbsp;&nbsp;&nbsp;</td>
+                        <td>size</td>
+                        <td>Indica el tamaño automático de ancho que tendrán las columnas.</td>
+                    </tr>
+                    <tr>
+                        <td>grid-auto-rows&nbsp;&nbsp;&nbsp;</td>
+                        <td>size</td>
+                        <td>Indica el tamaño automático de alto que tendrán las filas.</td>
+                    </tr>
+                    <tr>
+                        <td>grid-auto-flow</td>
+                        <td>row | column | dense</td>
+                        <td>Utiliza un algoritmo de autocolocación (intenta rellenar huecos).</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="parrafo">Un ejemplo de como se insertarían los elementos en una cuadrícula de 2x2 utilizando grid-auto-flow por columnas o por filas:</p>
+            <div class="ejemplo">
+                <!-- Grid -->
+                <h2>grid-auto-flow: row</h2>
+                <div class="gridRow"> <!-- contenedor -->
+                    <div class="item1"><span class="parrafo">Item 1</span></div> <!-- cada uno de los ítems del grid -->
+                    <div class="item2"><span class="parrafo">Item 2</span></div>
+                    <div class="item3"><span class="parrafo">Item 3</span></div>
+                    <div class="item4"><span class="parrafo">Item 4</span></div>
+                </div>
+                <hr>
+                <h2>grid-auto-flow: column</h2>
+                <div class="gridColumn"> <!-- contenedor -->
+                    <div class="item1"><span class="parrafo">Item 1</span></div> <!-- cada uno de los ítems del grid -->
+                    <div class="item2"><span class="parrafo">Item 2</span></div>
+                    <div class="item3"><span class="parrafo">Item 3</span></div>
+                    <div class="item4"><span class="parrafo">Item 4</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="codeAjuste">
+<pre>
+<span>.gridRow</span>{
+    <span class="properties"><i>background-color</i></span>: <span class="number">#2471A3</span>;
+    <span class="properties"><i>display</i></span>: <span class="properties">grid</span>;
+    <span class="properties"><i>grid-template-columns</i></span>: <span class="number">200<span class="unit">px</span> 200<span class="unit">px</span></span>;
+    <span class="properties"><i>grid-template-rows</i></span>: <span class="number">200<span class="unit">px</span> 200<span class="unit">px</span></span>;
+    <span class="properties"><i>grid-auto-flow</i></span>: <span class="properties">row</span>;
+}
+<span>.gridRow .item1</span> { 
+    <span class="properties"><i>background</i></span>: <span class="properties">gray</span>; 
+    <span class="properties"><i>color</i></span>: <span class="properties">white</span>; 
+    <span class="properties"><i>border</i></span>: <span class="properties">black solid</span>;
+    <span class="properties"><i>text-align</i></span>: <span class="properties">center</span>;
+    <span class="properties"><i>padding-top</i></span>: <span class="number">40</span><span class="unit">%</span>;
+    <span class="properties"><i>padding-bottom</i></span>: <span class="number">40</span><span class="unit">%</span>;
+}
+</pre>
+        </div>
+
+        <!-- Caja de ejemplo #2 -->
+        <!-- <div class="ejemplo2"> -->
+            <!-- Textos de ejemplo -->
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p> -->
+            <!-- Menu del ejemplo #2 -->
+            <!-- <div class="ejemploMenu2">
+                <ul>
+                   <li><a href="" class="beggin">HOME</a></li>
+                   <li><a href="">ABOUT US</a></li>
+                   <li><a href="">PORTAFOLIO</a></li>
+                   <li><a href="">BLOG</a></li>
+                   <li><a href="" class="end">CONTACT</a></li>
+                </ul>
+            </div> -->
+            <!-- Textos de ejemplo -->
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus aspernatur illo! Ex excepturi recusandae, eum ullam nostrum dicta necessitatibus ipsum consectetur assumenda minus enim minima debitis culpa possimus? Assumenda?</p>
+        </div> -->
+        
+        
+        <hr>
+        <div class="video">
+            <h2>Vídeo explicativo sobre position fixed y sticky</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QBOUSrMqlSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- Footer -->
+        </div>
+    <div class="footer">
+        <a href="/bruno/Flexbox/flexboxB.html"><div class="anterior">
+            <div class="back">
+                <img src="/cristofer/back.png">
+            </div>
+            <div class="btnText">
+                <p class="parrafo">Flexbox</p>
+            </div>
+        </div></a>
+        <a href="/cristofer/ejercicio/ejercicio.html"><div class="siguiente">
+            <div class="btnText">
+                <p class="parrafo">Ejercicio</p>
+            </div>
+            <div class="next" id="next">
+                <img src="/cristofer/next.png">
+            </div>
+        </div></a>
+    </div>
+</body>
+</html>

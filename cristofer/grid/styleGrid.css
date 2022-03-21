@@ -1,0 +1,602 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2471A3;
+}
+/* Contenedor */
+.container{
+    width: 80%;
+    background-color: #EEF8FF;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 30px;
+    margin-top:5%;
+    margin-bottom:4%;
+    box-shadow: 4px 4px 4px 4px black;
+}
+/* Parrafo */
+.parrafo{
+    font-size: x-large;
+    text-align: justify;
+    width: 99%;
+}
+/* ----------- Header ----------- */
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #EEF8FF;
+    height: 40px;
+}
+/* Titulo */
+.titulo{
+    text-align: center;
+    margin-top: 8px;
+}
+/*--------------------------------------------*/
+
+.fraccion{
+    color: gray;
+}
+
+/* ----------- Ejemplo #1: fixed ----------- */
+/* Caja de ejemplo #1 */
+div .ejemplo1{
+    width: 65%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    overflow-y: scroll;
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 0 0 15px;
+    /* position: sticky; 
+    top: 50px; */
+}
+/* div de menu */
+/* .ejemplo1 .ejemploMenu1{
+    position: fixed;
+    top: 20px;
+}
+
+.ejemplo1 .ejemploMenu1 ul{
+    position: sticky; 
+    top: 20px;
+    list-style: none;
+    padding: 0;
+    background-color: #454545;
+    width: fit-content;
+    text-align: center;
+    margin: auto; 
+    margin-bottom: 1%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.ejemploMenu1 ul li a{
+    text-decoration: none;
+    color: skyblue;
+    padding: 8px 30px;
+    display: block;
+}
+
+.ejemploMenu1 ul li{
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ejemploMenu1 ul li a:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+}
+
+.ejemploMenu1 .beggin:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ejemploMenu1 .end:hover{
+    background-color: rgb(10, 185, 185);
+    color: black;
+    border-radius: 0px 5px 5px 0px;
+} */
+/*--------------------------------------------*/
+
+/* ----------- Ejemplo #1: grid // inline-grid ----------- */
+/* Caja de ejemplo #2 */
+div .ejemplo{
+    width: 65%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    overflow-y: scroll;
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 0 0 15px;
+}
+.grid{
+    background-color: #2471A3;
+    display: grid;
+}
+.inlineGrid{
+    background-color: #2471A3;
+    display: inline-grid;
+}
+.a { 
+    background: gray; 
+    border: black solid;
+    width: fit-content;
+    padding: 3%; 
+}
+.b { 
+    background: gray; 
+    border: black solid;
+    width: fit-content;
+    padding: 3%; 
+}
+.c { 
+    background: gray; 
+    border: black solid;
+    width: fit-content;
+    padding: 3%; 
+}
+.d { 
+    background: gray; 
+    border: black solid;
+    width: fit-content;
+    padding: 3%; 
+}
+div .ejemploFraccion{
+    width: 65%;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px  15px;
+}
+.gridFraccion{
+    background-color: #2471A3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+.gridFraccion .item1 { 
+    background: #95efff; 
+    border: black solid;
+}
+.gridFraccion .item2 { 
+    background: #95efff; 
+    border: black solid;
+}
+.gridFraccion .item3 { 
+    background: #fa9a9a; 
+    border: black solid;
+}
+.gridFraccion .item4 { 
+    background: #fa9a9a; 
+    border: black solid;
+}
+.gridRow{
+    background-color: #2471A3;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    grid-auto-flow: row;
+}
+.gridRow .item1 { 
+    background: Gray; 
+    color: white; 
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 40%;
+}
+.gridRow .item2 { 
+    background: Gray; 
+    color: white; 
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 40%;
+}
+.gridRow .item3 { 
+    background: Gray; 
+    color: white; 
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 40%;
+}
+.gridRow .item4 { 
+    background: Gray; 
+    color: white; 
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 40%;
+}
+.gridColumn{
+    background-color: #2471A3;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    grid-auto-flow: column;
+}
+.gridColumn .item1 { 
+    background: Gray; 
+    color: white; 
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 40%;
+}
+.gridColumn .item2 { 
+    background: Gray; 
+    color: white;
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 45%;
+}
+.gridColumn .item3 { 
+    background: Gray; 
+    color: white; 
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 40%;
+}
+.gridColumn .item4 { 
+    background: Gray; 
+    color: white; 
+    border: black solid;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 40%;
+}
+
+.codeConcept{
+    width: 65%;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #454545;
+}
+.codeFraccion{
+    width: 65%;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #454545;
+}
+.codeAjuste{
+    width: 65%;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #454545;
+}
+/*--------------------------------------------*/
+
+iframe{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------ Ejemplos: Code ------------ */
+div .code{
+    width: 65%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #454545;
+}
+
+pre{
+    font-size: x-large;
+    color: white;
+}
+pre span{
+    color: lime;
+}
+.properties{
+    color:rgb(10, 185, 185);
+}
+.number{
+    color:rgb(225, 40, 225);
+}
+.unit{
+    color:rgb(230, 0, 60);
+}
+.comment{
+    color: #bebebe;
+}
+/*--------------------------------------------*/
+
+/* ------------ Lista de conceptos ------------ */
+.listConcept{
+    font-size: x-large;
+}
+/*--------------------------------------------*/
+
+/* ------------ Tabla ------------ */
+table{
+    margin: auto;
+    font-size: 22px;
+    background-color: #454545;
+}
+table td{
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #EEF8FF;
+}table th{
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #2471A3;
+    color: white;
+}
+/*--------------------------------------------*/
+
+hr{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* ------------ Tabla ------------ */
+
+/* .grid {
+    display: grid;
+    grid-template-columns: 50px 300px;
+    grid-template-rows: 200px 75px;
+} */
+
+/* .grid {
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3];
+    grid-template-rows: [y0] 1fr [y1] 1fr [y2] 1fr [y3];
+  }
+
+.header {
+    background: darkred;
+    grid-column-start: x0;
+    grid-column-end: x3; */
+  
+    /* Equivalente a */
+    /* grid-column: x0 / x3;
+}
+  
+.sidebar {
+    background: black;
+    grid-row: y1 / y2;
+    color: white;
+}
+  
+.content {
+    background: orange;
+    grid-column: x1 / x3;
+    grid-row: y1 / y3;
+}
+  
+.footer {
+    background: green;
+    grid-column: x0 / x3;
+    grid-row: y2;
+}
+.grid {
+    display: grid;
+    grid-template-areas: "head head"
+                         "menu main"
+                         "foot foot";
+  }
+  
+  .a { grid-area: head; background: blue }
+  .b { grid-area: menu; background: red }
+  .c { grid-area: main; background: green }
+  .d { grid-area: foot; background: orange } */
+  /*--------------------------------------------*/
+
+/* ------------ Imagenes ------------ */
+/* Imagen explicativa */
+.imagenExpli{
+    width: 80%;
+    margin: auto;
+    display: block;
+    border: 20px;
+}
+/* Imagen de codigos html */
+.divGrid{
+    width: 90%;
+    height: 90%;
+    padding: 3% 5% 1% 5%;
+}
+.subGridLineasNom .divGrid{
+    width: 90%;
+    height: 90%;
+    padding: 0 5% 1% 5%;
+}
+/*--------------------------------------------*/
+
+/* ------------ Ejemplos: LineaNomCode ------------ */
+.subGridLineasNom .code{
+    width: 65%;
+    height: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #454545;
+}
+/*--------------------------------------------*/
+
+/* ------------ Ejemplos: AreaCode ------------ */
+.subGridArea .code{
+    height: 290px;
+}
+/*--------------------------------------------*/
+
+/* ------------ Ejemplos: HuecosCode ------------ */
+.subGridHuecos .code{
+    height: 150px
+}
+.subGridHuecos .codeHuecos{
+    height: 210px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    /* overflow-y: scroll; */
+    box-shadow: 0 0 10px 5px black;
+    padding: 2%;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #454545;
+}
+/*--------------------------------------------*/
+
+/* ------------ Video ------------ */
+.videoUI{
+    width: 96%;
+    height: 100%;
+}
+.videoPosition{
+    width: 80%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    border-radius: 30px;
+    background-color: #2471A3;
+    text-align: center;
+    color: #EEF8FF;
+    box-shadow: 0 0 10px 5px black inset;
+}
+.video{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    border-radius: 30px;
+    background-color: #2471A3;
+    text-align: center;
+    color: #EEF8FF;
+    box-shadow: 0 0 10px 5px black inset;
+}
+/*--------------------------------------------*/
+
+/* ------------- Footer ------------- */
+.footer{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.siguiente{
+    background-color: #EEF8FF;
+    padding: 1%;
+    display: inline-block;
+    margin-left: 25%;
+    width:10%;
+    border-radius: 25px;
+}
+.siguiente:hover{
+    box-shadow: 0 0 5px 5px black inset;
+}
+.siguiente .btnText{
+    display: inline-block;
+    background-color: none;
+    margin: auto;
+    margin-bottom: auto;
+}
+.siguiente .next{
+    display: inline-block;
+    background-color: none;
+}
+/* .siguiente::after{
+    content: url(next.png);
+}
+.anterior::before{
+    content: url(back.png);
+} */
+.anterior{
+    background-color: #EEF8FF;
+    padding: 1%;
+    display: inline-block;
+    margin-right: 25%;
+    width: 10%;
+    border-radius: 25px;
+}
+.anterior:hover{
+    box-shadow: 0 0 5px 5px black inset;
+}
+.anterior .btnText{
+    display: inline-block;
+    background-color: none;
+    margin: auto;
+    margin-bottom: auto;
+}
+.anterior .back{
+    display: inline-block;
+    background-color: none;
+}
+.siguiente .parrafo{
+    font-size: large;
+    margin: auto;
+    color: black;
+}
+.anterior .parrafo{
+    font-size: large;
+    margin: auto;
+    color: black;
+}
+/*--------------------------------------------*/

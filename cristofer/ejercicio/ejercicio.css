@@ -1,0 +1,93 @@
+.cuadrado1{
+    
+    width: 100px; 
+    height: 100px; 
+    background: #2da9e2;
+    border: 10px;
+    border-color:black;
+}
+
+.cuadrado2{
+    width: 100px; 
+    height: 100px; 
+    background: #a217af;
+    border: 10px;
+    border-color:black;
+}
+
+.cuadrado3{
+    width: 100px; 
+    height: 100px; 
+    background: #e7395e  ;
+    border: 10px;
+    border-color:black;
+}
+
+.cuadrado4{
+    width: 100px; 
+    height: 100px; 
+    background: #eb1b1b;
+    border: 10px;
+    border-color:black;
+}
+.cuadrado5{
+    width: 100px; 
+    height: 100px; 
+    background: #ecff44;
+    border: 10px;
+    border-color:black;
+}
+.cuadrado6{
+    width: 100px; 
+    height: 100px; 
+    background: #94ff2f;
+    border: 10px;
+    border-color:black;
+}
+
+.container-wrap{
+    flex-wrap: wrap;
+
+    width: 500px;
+    height: 200px;
+}
+
+.container-row{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+        background-color:#c7d1ca83;
+        width: auto;
+        height: auto;
+    }
+
+/* CSS de Cristofer */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.parrafo{
+    font-size: x-large;
+    text-align: justify;
+    width: 99%;
+}
+.grid{
+    background-color: #2471A3;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    margin-top: 2%;
+}
+.grid .par { 
+    background-color: #FAD7A0; 
+    border: black solid;
+    text-align: center;
+    padding-top: 35%;
+    padding-bottom: 35%;
+}
+.grid .impar{
+    background-color: #AED6F1; 
+    border: black solid;
+    text-align: center;
+    padding-top: 35%;
+    padding-bottom: 35%;
+}
