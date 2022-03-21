@@ -1,0 +1,111 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #273746;
+    color: #17202A;
+}
+/* Contenedor */
+.container{
+    width: 80%;
+    background-color: #EEF8FF;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 3%;
+    border-radius: 30px;
+    margin-top:5%;
+    margin-bottom:4%;
+}
+/* ----------- Header ----------- */
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #EEF8FF;
+    height: 40px;
+}
+.container .concept{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+/* Titulo */
+.titulo{
+    text-align: center;
+    margin-top: 8px;
+}
+/*--------------------------------------------*/
+
+hr {
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+/* ----------- Menu de conceptos ----------- */
+.menu ul{
+    list-style: none;
+    padding: 0;
+    background-color: #273746;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #0ab9b9;
+    padding: 8px 30px;
+    display: block;
+    font-size: 35px;
+}
+
+.menu ul li{
+    display: block;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.menu ul li a:hover{
+    background-color: #0ab9b9;
+    color: #273746;
+    font-size: 40px;
+}
+
+.beggin:hover{
+    background-color: #0ab9b9;
+    color: #273746;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.end:hover{
+    background-color: #0ab9b9;
+    color: #273746;
+    border-radius: 0px 0px 15px 15px;
+}
+/*--------------------------------------------*/
+
+.mate1 {
+    margin-bottom: 1%;
+}
+
+.mate2 {
+    text-align: right;
+}
+
+.nombre {
+    font-size: xx-large;
+    margin-bottom: 1%;
+}
+
+.extra{
+    color: #4D5656;
+    font-size: large;
+    margin-bottom: 0;
+}
